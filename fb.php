@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 /**
- * @author: Łukasz Cebulski <lukasz.cebulski@gmail.pl>
- * @copyright: Łukasz Cebulski MIT License 2013
+ * @author: sblmasta <sblmasta@gmail.pl>
+ * @copyright: sblmasta MIT License 2013
  */
 
 require_once(APPPATH.'/vendor/facebook-sdk/src/facebook.php');
