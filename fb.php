@@ -138,11 +138,11 @@ class Fb
 				$user->password              = sha1($this->user()->id.'#'.uniqid());
 				$user->save();
 
-        $user->add('roles', ORM::factory('role', array('name' => 'login')));
+        			$user->add('roles', ORM::factory('role', array('name' => 'login')));
         
 				/*
-         * You can add another columns for User Model
-         */
+         			* You can add another columns for User Model
+         			*/
 
 				Request::current()->redirect(url::base());
 
@@ -151,7 +151,7 @@ class Fb
 			{
 				$current_user = ORM::factory('user')
 			                    ->where('facebook_id','=',$this->user()->id)
-				                ->and_where('email','=',$this->user()->email)
+				            ->and_where('email','=',$this->user()->email)
 			                    ->find();
 
 				if( $current_user->loaded() )
@@ -167,7 +167,8 @@ class Fb
 		}
 		else
 		{
-			var_dump( Auth::instance()->get_user() );
+			Auth::instance()->logout();
+			$this->sign();
 		}
 	}
 }
